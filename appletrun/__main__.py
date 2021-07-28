@@ -1,23 +1,21 @@
+#!python
+
 ###############################
 # APPLET RUN by Srujan Gurram #
 ###############################
 
 # USAGE: python appletrun.py EX_13_1.java
 # WHAT IT DOES: it runs applet code from given java file in a new window
-
+import os
+import sys
+import atexit
+import subprocess
+import re
 def main():
-    import os
-    import sys
-    import atexit
-    import subprocess
-    import re
-    import colorama
-    from colorama import Fore
     java_version = float(re.search('\"(\d+\.\d+).*\"', subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT).decode('utf-8')).groups()[0])
     if java_version >= 8 :
-        print(Fore.RED +"[ERROR] Applets Not supported on "+java_version+" version of Java")
-        print(Fore.BLUE +"[SUGGESTION] change to java 8 or less")
-        print(Fore.WHITE)
+        print('\033[91m' +"[ERROR] Applets Not supported on "+str(java_version)+" version of Java")
+        print('\033[94m' +"[SUGGESTION] change to java 8 or less")
     else:
         user_input_path = sys.argv[-1].strip()
         program_path = os.path.abspath(user_input_path)
@@ -25,7 +23,7 @@ def main():
         if len(sys.argv) > 1:
             os.system("javac " + program_path)
             if os.path.isfile(program_file_name+".class"):
-                print(Fore.GREEN + "[COMPILE] Applet Compiled")
+                print('\033[92m' + "[COMPILE] Applet Compiled")
                 with open("applet.html", "w") as html_file:   
                     html_file.write(
                         '''
@@ -35,25 +33,24 @@ def main():
                             </body>
                         </html>
                         ''')
-                print(Fore.BLUE + "[RUNNING] Applet Started")
+                print('\033[94m' + "[RUNNING] Applet Started")
                 os.system("appletviewer applet.html")
             else:
-                print(Fore.RED +"[Error] Compilation failed")
-                print(Fore.WHITE)
+                print('\033[91m' +"[Error] Compilation failed")
 
         else:
-            print(Fore.RED + "[ERROR] No file specified")
-            print(Fore.BLUE + "USAGE: python appletrun.py <path_to_java_file>")
-            print(Fore.BLUE + "Example: python appletrun.py EX_13_1.java")
-            print(Fore.WHITE)
+            print('\033[91m' + "[ERROR] No file specified")
+            print('\033[94m' + "USAGE: python appletrun.py <path_to_java_file>")
+            print('\033[94m' + "Example: python appletrun.py EX_13_1.java")
         
         def exit_handler():
             try:
                 os.remove(os.path.splitext(program_path)[0] + ".class")
                 os.remove("applet.html")
-                print(Fore.GREEN +"[Sucess] Applet closed successfully")
-                print(Fore.WHITE)
+                print('\033[92m' +"[Sucess] Applet closed successfully")
             except:
                 pass
             
         atexit.register(exit_handler)
+if __name__ == "__main__":
+    main()
