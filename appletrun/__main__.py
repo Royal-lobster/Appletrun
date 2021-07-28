@@ -46,7 +46,7 @@ def main():
 
         else:
             print('\033[91m' + "[ERROR] No file specified"+ '\x1b[0m')
-            print('\033[94m' + "USAGE: python appletrun.py <path_to_java_file>"+ '\x1b[0m')
+            print('\033[94m' + "USAGE: appletrun <path_to_java_file>"+ '\x1b[0m')
             print('\033[94m' + "Example: python appletrun.py EX_13_1.java"+ '\x1b[0m')
         
         def exit_handler():
