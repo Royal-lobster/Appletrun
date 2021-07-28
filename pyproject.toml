@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "appletrun"
-version = "0.1.16"
+version = "0.8.2"
 description = ""
 authors = ["Royal-lobster <srujangs8@gmail.com>"]
 
