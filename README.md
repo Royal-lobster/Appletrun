@@ -13,6 +13,3 @@ pip install appletrun
 ```
  appletrun nameOfFile.java
 ```
-<p align="center">
-<img src="https://user-images.githubusercontent.com/52039218/127249416-0c7baa63-9cc9-48c7-a987-3553e5c1edd7.gif"/>
-</p>
