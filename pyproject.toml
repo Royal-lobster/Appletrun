@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "appletrun"
-version = "1.7.5"
+version = "1.8.0"
 description = "✨ Appletrun takes java file as input and runs the applet instantly with out compilation and html files"
 authors = ["Royal-lobster <srujangs8@gmail.com>"]
 repository = "https://github.com/Royal-lobster/appletrun-python"
