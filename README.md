@@ -5,6 +5,14 @@
 
 AppletRun runs applet code from given java file in a new window
 
+## 👉 Installation
 ```
- USAGE: appletrun EX_13_1.java
+pip install appletrun
 ```
+## 👉 Usage
+```
+ appletrun nameOfFile.java
+```
+
+https://user-images.githubusercontent.com/52039218/127249101-5cd6c41a-b98a-4b59-8c30-728d3a11ae04.mp4
+
