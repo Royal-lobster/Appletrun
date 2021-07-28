@@ -1,3 +1,4 @@
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/52039218/127250530-5bf4021c-1f4b-496a-abcc-561e4d5afdd5.gif)
 # APPLETRUN
 ![](https://img.shields.io/pypi/v/appletrun?style=for-the-badge)
 ![](https://img.shields.io/apm/l/vim-mode?style=for-the-badge)
@@ -13,3 +14,6 @@ pip install appletrun
 ```
  appletrun nameOfFile.java
 ```
+<p align="center">
+<img src="https://user-images.githubusercontent.com/52039218/127250568-51bfd770-49c3-4d32-9da3-18627d9abde3.gif"/>
+ </p>
