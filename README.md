@@ -5,6 +5,9 @@
 ![](https://img.shields.io/badge/requires-Java%20%3C%3D%208-red?style=for-the-badge)
 
 AppletRun runs applet code from given java file in a new window
+<p align="center">
+<img src="./snapshot.png"/>
+ </p>
 
 ## 👉 Installation
 
