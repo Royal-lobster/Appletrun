@@ -29,5 +29,5 @@ if not working try `python -m pip install appletrun` or `python3 -m pip install 
 
 ## 👉 Issues
 
-If you found any bugs or issue post here
+If you find any bugs ? or have an issue ? post here
 https://github.com/Royal-lobster/appletrun-python/issues
